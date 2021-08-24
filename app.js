@@ -46,5 +46,34 @@
 
 // console.log(fullStack);
 
+//EXERCISE LEVEL 3
+
+//1
+
+//Sort the array and find the min and max age
+
+const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+
+// const agesSorted = ages.sort();
+
+// console.log(agesSorted[0], agesSorted[agesSorted.length - 1]);
+
+//Find the median age(one middle item or two middle items divided by two)
+
+// console.log(agesSorted[Math.round(ages.length / 2)]);
+
+//Find the average age(all items divided by number of items)
+
+let sum = 0;
+
+for (let i = 0; i < ages.length; i++) {
+    sum += ages[i];
+}
+
+console.log(Math.round(sum / ages.length));
+
+
+
+
 
 
