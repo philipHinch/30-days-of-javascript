@@ -19,6 +19,9 @@
 //     i++
 // } while (i <= 10)
 
+//2
 
+
+console.log('hello');
 
 
