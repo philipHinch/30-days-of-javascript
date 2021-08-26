@@ -29,15 +29,12 @@
 // ######
 // #######
 
-for (let row = 1; row <= 6; row++) {
-    let pattern = '';
-    for (let i = 0; i < row; i++)
-        pattern += '#';
-    console.log(pattern);
-};
-
-
-
+// for (let row = 1; row <= 6; row++) {
+//     let pattern = '';
+//     for (let i = 0; i < row; i++)
+//         pattern += '#';
+//     console.log(pattern);
+// };
 
 //5
 
@@ -71,11 +68,48 @@ for (let row = 1; row <= 6; row++) {
 
 //9 Use for loop to iterate from 0 to 100 and print only prime numbers ??????????????????????????????????????????????????????????????????????
 
-//10
+//10 Use for loop to iterate from 0 to 100 and print the sum of all numbers.
 
+// let sum = 0;
 
+// for (let i = 0; i < 101; i++) {
+//     sum += i;
+// };
 
+// console.log(sum);
 
+//11 Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
+
+// let sumOdds = 0;
+// let sumEvens = 0;
+
+// for (let i = 0; i < 101; i++) {
+//     if (i % 2 == 0) {
+//         sumEvens += i;
+//     } else {
+//         sumOdds += i;
+//     }
+// };
+
+// console.log(sumEvens, sumOdds);
+
+//12 Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds. Print sum of evens and sum of odds as array
+
+let evens = 0;
+let odds = 0;
+let arr = [];
+
+for (let i = 0; i < 101; i++) {
+    if (i % 2 == 0) {
+        evens += i;
+    } else {
+        odds += i;
+    }
+};
+
+arr.push(evens, odds);
+
+console.log(arr);
 
 
 
