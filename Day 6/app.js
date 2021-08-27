@@ -95,21 +95,58 @@
 
 //12 Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds. Print sum of evens and sum of odds as array
 
-let evens = 0;
-let odds = 0;
-let arr = [];
+// let evens = 0;
+// let odds = 0;
+// let arr = [];
 
-for (let i = 0; i < 101; i++) {
-    if (i % 2 == 0) {
-        evens += i;
-    } else {
-        odds += i;
-    }
+// for (let i = 0; i < 101; i++) {
+//     if (i % 2 == 0) {
+//         evens += i;
+//     } else {
+//         odds += i;
+//     }
+// };
+
+// arr.push(evens, odds);
+
+// console.log(arr);
+
+// 13 Develop a small script which generate array of 5 random numbers
+
+// let randomNums = [];
+
+// for (let i = 0; i < 5; i++) {
+//     randomNums.push(Math.ceil(Math.random() * 9));
+// };
+
+// console.log(randomNums);
+
+// 14 Develop a small script which generate array of 5 random numbers and the numbers must be unique
+
+// let randomNums = [];
+
+// for (let i = 5; randomNums.length < i;) {
+//     let result = Math.floor(Math.random() * 10);
+//     if (randomNums.indexOf(result) === -1) {
+//         randomNums.push(result)
+//     }
+// };
+
+// console.log(randomNums);
+
+// 15 Develop a small script which generate a six characters random id:
+
+let chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+
+let randomId = '';
+
+for (let i = 0; i < 5; i++) {
+    let randomChar = Math.floor(Math.random() * chars.length);
+    randomId += chars[randomChar];
 };
 
-arr.push(evens, odds);
+console.log(randomId);
 
-console.log(arr);
 
 
 
