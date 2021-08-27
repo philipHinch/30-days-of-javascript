@@ -57,32 +57,80 @@
 
 //13 Body mass index(BMI) is calculated as follows: bmi = weight in Kg / (height x height) in m2. Write a function which calculates bmi. BMI is used to broadly define different weight groups in adults 20 years old or older.Check if a person is underweight, normal, overweight or obese based the information given below.
 
-// The same groups apply to both men and women.
-// Underweight: BMI is less than 18.5
-// Normal weight: BMI is 18.5 to 24.9
-// Overweight: BMI is 25 to 29.9
-// Obese: BMI is 30 or more
+// function calcBmi(age, weight, height) {
+//     let heightMeters = height / 100;
+//     if (age < 20) {
+//         alert('Sorry you need to be 20 years or older to calculate your BMI')
+//     } else if (weight > 150) {
+//         alert('Jesus, you are fat as hell!!!!')
+//     } else if (heightMeters > 2.5) {
+//         alert('You must be a giant!!!')
+//     } else {
+//         let bmi = Math.round(weight / (Math.pow(heightMeters, 2)));
+//         if (bmi < 18) {
+//             document.write(`<br><br><br><br><h1 style="font-size:3rem; color:crimson">Your BMI is ${ bmi }. You are "Underweight"</h1>`);
+//         } else if (bmi > 18 && bmi < 25) {
+//             document.write(`<br><br><br><br><h1 style="font-size:3rem; color:crimson">Your BMI is ${ bmi }. Your have a "Normal weight" </h1>`);
+//         } else if (bmi > 25 && bmi < 30) {
+//             document.write(`<br><br><br><br><h1 style="font-size:3rem; color:crimson">Your BMI is ${ bmi }. You are "Overweight"</h1>`);
+//         } else {
+//             document.write(`<br><br><br><br><h1 style="font-size:3rem; color:crimson">Your BMI is ${ bmi }. You are "Obese"</h1>`);
+//         }
+//     }
+// };
 
-function calcBmi(age, weight, height) {
-    let heightMeters = height / 100;
-    if (age < 20) {
-        alert('Sorry you need to be 20 years or older to calculate your BMI')
-    } else if (weight > 150) {
-        alert('Jesus, you are fat as hell!!!!')
-    } else if (heightMeters > 2.5) {
-        alert('You must be a giant!!!')
-    } else {
-        let bmi = Math.round(weight / (Math.pow(heightMeters, 2)));
-        if (bmi < 18) {
-            document.write(`<br><br><br><br><h1 style="font-size:3rem; color:crimson">Your BMI is ${ bmi }. You are "Underweight"</h1>`);
-        } else if (bmi > 18 && bmi < 25) {
-            document.write(`<br><br><br><br><h1 style="font-size:3rem; color:crimson">Your BMI is ${ bmi }. Your have a "Normal weight" </h1>`);
-        } else if (bmi > 25 && bmi < 30) {
-            document.write(`<br><br><br><br><h1 style="font-size:3rem; color:crimson">Your BMI is ${ bmi }. You are "Overweight"</h1>`);
-        } else {
-            document.write(`<br><br><br><br><h1 style="font-size:3rem; color:crimson">Your BMI is ${ bmi }. You are "Obese"</h1>`);
-        }
+// calcBmi(30, 85, 187);
+
+// EXERCISE LEVEL 3
+
+//2 Write a function name rgbColorGenerator and it generates rgb colors.
+
+// function rgbColorGenerator() {
+//     let a;
+//     let b;
+//     let c;
+
+//     switch (true) {
+//         case a == undefined:
+//             a = numGenerator();
+//         case b == undefined:
+//             b = numGenerator();
+//         case c == undefined:
+//             c = numGenerator();
+//     }
+
+//     console.log(`rgb(${ a },${ b },${ c })`);
+// }
+
+// function numGenerator() {
+//     let num = Math.floor(Math.random() * 256);
+//     return num;
+// };
+
+// rgbColorGenerator();
+
+//3 Write a function arrayOfHexaColors which return any number of hexadecimal colors in an array.
+
+let chars = 'abcdef0123456789';
+let arr = [];
+
+function addHex() {
+    let hex = '';
+    for (let i = 0; i < 6; i++) {
+        hex += chars[Math.floor(Math.random() * chars.length)];
     }
+    arr.push('#' + hex)
 };
 
-calcBmi(20, 70, 187);
+function arrayOfHexaColors(num) {
+    for (let i = 0; i < num; i++) {
+        addHex()
+    }
+    console.log(arr);
+};
+
+arrayOfHexaColors(6);
+
+
+
+
