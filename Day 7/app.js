@@ -111,26 +111,50 @@
 
 //3 Write a function arrayOfHexaColors which return any number of hexadecimal colors in an array.
 
-let chars = 'abcdef0123456789';
-let arr = [];
+// let chars = 'abcdef0123456789';
+// let arr = [];
 
-function addHex() {
-    let hex = '';
-    for (let i = 0; i < 6; i++) {
-        hex += chars[Math.floor(Math.random() * chars.length)];
+// function addHex() {
+//     let hex = '';
+//     for (let i = 0; i < 6; i++) {
+//         hex += chars[Math.floor(Math.random() * chars.length)];
+//     };
+//     arr.push('#' + hex);
+// };
+
+// function arrayOfHexaColors(num) {
+//     for (let i = 0; i < num; i++) {
+//         addHex();
+//     };
+//     console.log(arr);
+// };
+
+// arrayOfHexaColors(6);
+
+// Call your function isEmpty, it takes a parameter and it checks if it is empty or not
+
+// function isEmpty(arr) {
+//     if (Array.isArray(arr) === true) {
+//         if (arr.length === 0) {
+//             console.log('Array is empty');
+//         } else {
+//             console.log('Array is not empty');
+//         }
+//     } else {
+//         console.log('Please enter an array!');
+//     }
+// };
+
+// isEmpty([1, 2, 3]);
+
+// 11 Call your function sum, it takes any number of arguments and it returns the sum.
+
+function sum() {
+    let sum = 0;
+    for (let i = 0; i < arguments.length; i++) {
+        sum += arguments[i]
     }
-    arr.push('#' + hex)
-};
+    console.log(sum);
+}
 
-function arrayOfHexaColors(num) {
-    for (let i = 0; i < num; i++) {
-        addHex()
-    }
-    console.log(arr);
-};
-
-arrayOfHexaColors(6);
-
-
-
-
+sum(1, 2, 3)
