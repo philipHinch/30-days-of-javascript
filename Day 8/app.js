@@ -118,15 +118,15 @@ function signUp() { ///hardcoded data, prompt was very annoying
         isLoggedIn: true
     }
     //check if user already exist
-    if (isValid(user) === true) {
+    if (isUserValid(user) === true) {
         users.push(user)
     } else {
         alert('Sorry, user already exists')
     }
-
+    addRating(user)
 }
 
-function isValid(data) {
+function isUserValid(data) {
     for (let i = 0; i < users.length; i++) {
         if (data.username === users[i].username || data.email === users[i].email) {
             return false
@@ -135,6 +135,28 @@ function isValid(data) {
     return true
 }
 
+// function isIdValid(id) {
+//     for (let i = 0; i < users.length; i++) {
+//         if (id === products[i]._id) {
+//             return false
+//         }
+//     }
+//     return true
+// }
+
+function addRating(user) {
+    let product = prompt('Choose product')
+    for (let i = 0; i < products.length; i++) {
+        if (products[i]._id === product) {
+            products[i].ratings.push({ userId: user._id, rate: +prompt('Add rating') })
+        }
+    }
+}
+
+
+
+
 signUp()
 
 console.log(users);
+console.log(products);
