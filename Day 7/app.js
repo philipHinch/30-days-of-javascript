@@ -149,12 +149,6 @@
 
 // 11 Call your function sum, it takes any number of arguments and it returns the sum.
 
-function sum() {
-    let sum = 0;
-    for (let i = 0; i < arguments.length; i++) {
-        sum += arguments[i]
-    }
-    console.log(sum);
-}
+// const sum = (...args) => args.reduce((acc, num) => acc + num)
 
-sum(1, 2, 3)
+// console.log(sum(24, 33, 1));
