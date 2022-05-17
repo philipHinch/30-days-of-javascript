@@ -2898,7 +2898,7 @@ const countries_data = [
 
 // mostSpokenLanguages(countries_data);
 
-const countries = ['Finland', 'Sweden', 'Denmark', 'Norway', 'IceLand']
+const countries1 = ['Finland', 'Sweden', 'Denmark', 'Norway', 'IceLand']
 const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 const products = [
@@ -2928,9 +2928,74 @@ const products = [
 
 // 3. Declare a function called categorizeCountries which returns an array of countries which have some common pattern(you find the countries array in this repository as countries.js(eg 'land', 'ia', 'island','stan')).
 
-const categorizeCountries = (word) => {
-    return countries_data.filter(country => country.name.includes(word));
-}
+// const categorizeCountries = (word) => {
+//     return countries_data.filter(country => country.name.includes(word));
+// }
 
-console.log(categorizeCountries('land'));
+// console.log(categorizeCountries('land'));
 
+// 4. Create a function which returns an array of objects, which is the letter and the number of times the letter use to start with a name of a country.
+
+// const filterArr = () => {
+//     countries_data.reduce((obj, item) => {
+//         const startingLetter = item.name[0]
+//         if (!obj[startingLetter]) {
+//             obj[startingLetter] = 0
+//         }
+//         obj[startingLetter[0]]++
+//         console.log(obj);
+//     }, {});
+// }
+// filterArr()
+
+// let countries = [
+//     { name: 'Ukraine' },
+//     { name: 'Bulgaria' },
+//     { name: 'Cyprus' },
+//     { name: 'Andorra' },
+//     { name: 'United Kingdom' },
+//     { name: 'Canada' }
+// ]
+
+
+// const getStartingLetters = arr => {
+//     const occurences = arr
+//         .reduce((acc, { name }) => {
+//             const startingLetter = name[0]
+//             acc[startingLetter] = (acc[startingLetter] || 0) + 1
+//             return acc
+//         }, {})
+
+//     return Object
+//         .keys(occurences)
+//         .sort()
+//         .map(letter => ({ letter, count: occurences[letter] }))
+// }
+
+
+// console.log(getStartingLetters(countries_data))
+
+// 5. Declare a getFirstTenCountries function and return an array of ten countries. Use different functional programming to work on the countries.js array
+
+// const getFirstTenCountries = (arr) => {
+//     let newArr = []
+//     for (let i = 0; i < 10; i++) {
+//         newArr.push(arr[i])
+//     }
+//     console.log(newArr);
+// }
+
+// getFirstTenCountries(countries_data);
+
+// 6. Declare a getLastTenCountries function which which returns the last ten countries in the countries array.
+
+// const getLastTenCountries = (arr) => {
+//     let newArr = []
+//     for (let i = arr.length - 10; i < arr.length; i++) {
+//         newArr.push(arr[i])
+//     }
+//     //    let newArr = arr.slice(-10)
+//     console.log(newArr);
+// }
+
+// getLastTenCountries(countries_data);
